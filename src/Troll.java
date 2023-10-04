@@ -4,7 +4,18 @@ public class Troll {
     private int altezza;
     private int eta;
 
-    public Troll(int vita, String nome, int altezza, int eta) {
+    public Troll(int vita, String nome, int altezza, int eta) throws Exception {
+        if (vita<=0){
+            throw new Exception("La vita non può essere negativa \n");
+        }
+
+        if (altezza<=0){
+            throw new Exception("L'altezza non può essere negativa \n");
+        }
+
+        if (eta<0){
+            throw new Exception("L'età non può essere negativa \n");
+        }
         setVita(vita);
         setNome(nome);
         setAltezza(altezza);
