@@ -2,9 +2,9 @@ public class Troll {
     private int vita;
     private String nome;
     private int altezza;
-    private int eta;
+    private int danno;
 
-    public Troll(int vita, String nome, int altezza, int eta) throws Exception {
+    public Troll(int vita, String nome, int altezza, int danno) throws Exception {
         if (vita<=0){
             throw new Exception("La vita non può essere negativa \n");
         }
@@ -13,13 +13,13 @@ public class Troll {
             throw new Exception("L'altezza non può essere negativa \n");
         }
 
-        if (eta<0){
+        if (danno<0){
             throw new Exception("L'età non può essere negativa \n");
         }
         setVita(vita);
         setNome(nome);
         setAltezza(altezza);
-        setEta(eta);
+        setDanno(danno);
     }
 
     public void setVita(int vita) {
@@ -34,8 +34,8 @@ public class Troll {
         this.altezza = altezza;
     }
 
-    public void setEta(int eta) {
-        this.eta = eta;
+    public void setDanno(int eta) {
+        this.danno = danno;
     }
 
     public int getVita() {
@@ -50,7 +50,7 @@ public class Troll {
         return altezza;
     }
 
-    public int getEta() {
-        return eta;
+    public int getDanno() {
+        return danno;
     }
 }
